@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма реєстрації</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #cfe9ff, #9ac6ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: #ffffffcc;
+            backdrop-filter: blur(8px);
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 50, 0.15);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2b5ea8;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+            color: #2b4f73;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #9ac6ff;
+            border-radius: 8px;
+            background-color: #f0f7ff;
+            transition: 0.2s;
+        }
+
+        input:focus, select:focus {
+            border-color: #2b5ea8;
+            box-shadow: 0 0 5px #72a7ff;
+            outline: none;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #2b5ea8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #1e4780;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Форма реєстрації</h2>
+
+        <form>
+            <label>Імʼя:</label>
+            <input type="text" name="fname" required>
+
+            <label>Прізвище:</label>
+            <input type="text" name="lname" required>
+
+            <label>Електронна пошта:</label>
+            <input type="email" name="email" required>
+
+            <label>Пароль:</label>
+            <input type="password" name="password" required>
+
+            <label>Підтвердження паролю:</label>
+            <input type="password" name="confirm_password" required>
+
+            <label>Вік:</label>
+            <input type="number" name="age" min="1" required>
+
+            <label>Стать:</label>
+            <select name="gender" required>
+                <option value="" disabled selected>Оберіть стать</option>
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+                <option value="other">Інша</option>
+            </select>
+
+            <button type="submit">Зареєструватись</button>
+        </form>
+    </div>
+
+</body>
+</html>
